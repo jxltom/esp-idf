@@ -1182,7 +1182,7 @@ def action_install_python_env(args):
             import virtualenv   # noqa: F401
         except ImportError:
             info('Installing virtualenv')
-            subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--user', 'virtualenv'],
+            subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'virtualenv'],
                                   stdout=sys.stdout, stderr=sys.stderr)
 
         subprocess.check_call([sys.executable, '-m', 'virtualenv', idf_python_env_path],
